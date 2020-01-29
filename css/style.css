@@ -1,0 +1,74 @@
+/*==================
+ESTILOS GENERALES
+==================*/
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background-color: #eaeaea;
+    color: rgb(80, 80, 80);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+/*==================
+SECCION "BÚSQUEDA"
+==================*/
+
+#__seccion-busqueda {
+    padding: 30px 0;
+}
+
+#__seccion-busqueda input {
+    height: 50px;
+    width: 40%;
+    border: none;
+    border-radius: 3px;
+    padding-left: 50px;
+    box-shadow:
+        0 1px 1px 0 rgba(0,0,0,0.14),
+        0 2px 1px -1px rgba(0,0,0,0.12),
+        0 1px 3px 0 rgba(0,0,0,0.20);
+}
+
+#__seccion-busqueda .__input-group:before {
+    content: '';
+    background-image: url('../img/icon_search.svg');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0.5;
+}
+
+#__seccion-busqueda input[type="submit"] {
+    display: none;
+}
+
+/*==================
+SECCION "LISTADO DE BANDERAS"
+==================*/
+
+.__card-bandera {
+    transition: all 0.2s ease-in-out;
+}
+
+.__card-bandera:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.17), 0 15px 12px rgba(0,0,0,0.09);
+}
+
+.__card-bandera > img {
+    width: 100%;
+}
+
+.__card-bandera ul {
+    list-style-type: none;
+    padding: 0;
+}
