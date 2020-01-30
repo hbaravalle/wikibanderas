@@ -32,7 +32,7 @@
         
         <section id="__seccion-busqueda">
             <div class="container">
-                <form action="">
+                <form action="" method="get">
                     <div class="__input-group">
                         <input type="text" placeholder="Buscar un país...">
                         <input type="submit">
@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-3 mb-5">
+                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card __card-bandera">
                             <img src="banderas/italia.png" alt="Bandera de Italia">
                             <div class="card-body">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3 mb-5">
+                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card __card-bandera">
                             <img src="banderas/italia.png" alt="Bandera de Italia">
                             <div class="card-body">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3 mb-5">
+                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card __card-bandera">
                             <img src="banderas/italia.png" alt="Bandera de Italia">
                             <div class="card-body">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3 mb-5">
+                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card __card-bandera">
                             <img src="banderas/italia.png" alt="Bandera de Italia">
                             <div class="card-body">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3 mb-5">
+                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card __card-bandera">
                             <img src="banderas/italia.png" alt="Bandera de Italia">
                             <div class="card-body">
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </section>
-        
+        <small class="text-center">Hecho con <i class="icon ion-md-heart text-danger"></i> para los alumnos de DH</small>
     </main>
     
     
