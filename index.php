@@ -1,32 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WikiBanderas</title>
-    
-    <!-- Estilos -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
+<?php require_once 'template/head.php' ?>
 <body>
     
-    <header>
-        <!-- Image and text -->
-        <nav class="navbar navbar-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">WikiBanderas</a>
-                <div>
-                    <a href="">Login</a>
-                    <a href="">Registro</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php require_once 'template/header.php' ?>
     
     <main>
         

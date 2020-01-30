@@ -4,8 +4,7 @@
       <div class="container">
         <a class="navbar-brand" href="#">WikiBanderas</a>
         <div>
-          <a href="">Login</a>
-          <a href="">Registro</a>
+          <a href="crear_pais.php">Crear país</a>
         </div>
       </div>
     </nav>
