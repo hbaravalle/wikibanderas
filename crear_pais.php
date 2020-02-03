@@ -1,48 +1,18 @@
 <?php
 
-require_once('clases/Pais.php');
-
-$dbDSN = "mysql:host=localhost; dbname=banderas; charset=utf8mb4";
-$dbUsuario = 'root';
-$dbPass = '';
+require_once 'autoload.php';
 
 try {
-    $conexion = new PDO($dbDSN, $dbUsuario, $dbPass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $conexion = new BasedeDatos();
 } catch(PDOException $exception) {
     echo $exception->getMessage();
 }
 
-$queryContinentes = $conexion->prepare('SELECT * FROM continentes');
-$queryContinentes->execute();
-$resultadoContinentes = $queryContinentes->fetchAll(PDO::FETCH_ASSOC);
-
+$continentes = $conexion->allContinentes();
 
 if($_POST) {
-    // Recuerden validar que los datos sean correctos
-    
-    /*
-    
-    MANERA VIEJA:
-    
-    $pais = [
-    "nombre" => $_POST['nombre'],
-    "poblacion" => $_POST['poblacion'],
-    "imagen" => $_FILE["imagen"]["name"]
-    ];
-    */
-    
-    // Manera nueva Orientada a Objetos:
     $pais = new Pais($_POST['nombre'], $_POST['poblacion'], $_POST['continente'], $_FILES['bandera']['name']);
-    
-    $query = $conexion->prepare("INSERT INTO paises(nombre, poblacion, id_continente, bandera) VALUES (:nombre, :poblacion, :continente, :bandera)");
-    
-    $query->bindValue(':nombre', $pais->getNombre());
-    $query->bindValue(':poblacion', $pais->getPoblacion());
-    $query->bindValue(':continente', $pais->getContinente());
-    $query->bindValue(':bandera', $pais->getBandera());
-    
-    $query->execute();
-    
+    // DB::guardarPais($pais);
 };
 
 
@@ -51,10 +21,10 @@ if($_POST) {
 
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once('template/head.php') ?>
+<?php require_once('layout/head.php') ?>
 <body>
     
-    <?php require_once('template/header.php'); ?>
+    <?php require_once('layout/header.php'); ?>
     <main>
         <div class="container">
             <div class="py-5 text-center">
@@ -79,7 +49,7 @@ if($_POST) {
                             <label for="__input-continente">Continente</label>
                             <select class="form-control" name="continente" id="__input-continente">
                                 <option value="">Elegir un continente...</option>
-                                <?php foreach($resultadoContinentes as $continente): ?>
+                                <?php foreach($continentes as $continente): ?>
                                     <option value="<?= $continente['id']?>"><?= $continente['nombre'] ?></option>
                                 <?php endforeach; ?>
 

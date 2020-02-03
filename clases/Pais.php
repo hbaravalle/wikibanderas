@@ -10,6 +10,7 @@ class Pais
     public function __construct($nombre, $poblacion, $continente, $bandera) {
         $this->nombre = $nombre;
         $this->poblacion = $poblacion;
+        $this->contiente = $continente;
         $this->bandera = $bandera;
     }
 

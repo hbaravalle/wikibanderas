@@ -1,3 +1,9 @@
+<?php
+
+require_once('autoload.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php require_once 'template/head.php' ?>
@@ -24,69 +30,13 @@
 
                     <div class="col-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card __card-bandera">
-                            <img src="banderas/italia.png" alt="Bandera de Italia">
+                            <img src="<?php ?>" alt="Bandera de <?php ?>">
                             <div class="card-body">
-                                <h4 class="card-title">Alemania</h4>
+                                <h4 class="card-title"><?php ?></h4>
                                 <ul>
-                                    <li><strong>Población:</strong> 1000000</li>
-                                    <li><strong>Region:</strong> Europa</li>
-                                    <li><strong>Capital:</strong> Berlin</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
-                        <div class="card __card-bandera">
-                            <img src="banderas/italia.png" alt="Bandera de Italia">
-                            <div class="card-body">
-                                <h4 class="card-title">Alemania</h4>
-                                <ul>
-                                    <li><strong>Población:</strong> 1000000</li>
-                                    <li><strong>Region:</strong> Europa</li>
-                                    <li><strong>Capital:</strong> Berlin</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
-                        <div class="card __card-bandera">
-                            <img src="banderas/italia.png" alt="Bandera de Italia">
-                            <div class="card-body">
-                                <h4 class="card-title">Alemania</h4>
-                                <ul>
-                                    <li><strong>Población:</strong> 1000000</li>
-                                    <li><strong>Region:</strong> Europa</li>
-                                    <li><strong>Capital:</strong> Berlin</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
-                        <div class="card __card-bandera">
-                            <img src="banderas/italia.png" alt="Bandera de Italia">
-                            <div class="card-body">
-                                <h4 class="card-title">Alemania</h4>
-                                <ul>
-                                    <li><strong>Población:</strong> 1000000</li>
-                                    <li><strong>Region:</strong> Europa</li>
-                                    <li><strong>Capital:</strong> Berlin</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-lg-4 col-xl-3 mb-5">
-                        <div class="card __card-bandera">
-                            <img src="banderas/italia.png" alt="Bandera de Italia">
-                            <div class="card-body">
-                                <h4 class="card-title">Alemania</h4>
-                                <ul>
-                                    <li><strong>Población:</strong> 1000000</li>
-                                    <li><strong>Region:</strong> Europa</li>
-                                    <li><strong>Capital:</strong> Berlin</li>
+                                    <li><strong>Población:</strong> <?php ?></li>
+                                    <li><strong>Region:</strong> <?php ?></li>
+                                    <li><strong>Capital:</strong> <?php ?></li>
                                 </ul>
                             </div>
                         </div>
