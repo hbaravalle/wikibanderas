@@ -18,6 +18,13 @@ class BaseDeDatos extends PDO
         parent::__construct('mysql:host='.BaseDeDatos::PARAM_host.';port='.BaseDeDatos::PARAM_port.';dbname='.BaseDeDatos::PARAM_db_name,BaseDeDatos::PARAM_user,BaseDeDatos::PARAM_db_pass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     }
 
+    public function buscarPais($id) {
+        $query = parent::prepare("SELECT paises.id, paises.nombre, paises.poblacion, continentes.nombre as continente, paises.bandera FROM paises, continentes WHERE paises.nombre LIKE '%$id%' AND paises.continente_id = continentes.id");
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     public function allPaises() {
         $query = parent::prepare('SELECT paises.id, paises.nombre, paises.poblacion, continentes.nombre as continente, paises.bandera FROM paises, continentes WHERE paises.continente_id = continentes.id');
         $query->execute();

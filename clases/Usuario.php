@@ -7,7 +7,7 @@ class Usuario
     protected $email;
     protected $password;
     protected $repassword;
-    public function __construct($email,$password,$repassword=null, $nombre=null){
+    public function __construct($email,$password,$repassword=null, $nombre = null){
         $this->nombre = $nombre;
         $this->email = $email;
         $this->password = $password;

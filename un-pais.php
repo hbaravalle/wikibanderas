@@ -2,7 +2,10 @@
 
 require_once('autoload.php');
 $conexion = new BaseDeDatos();
-$paises = $conexion->allPaises();
+if(isset($_GET['pais']) && $_GET['pais'] != "") {
+    $elPais = $conexion->buscarPais($_GET['pais']);
+    Helper::pre($elPais);
+}
 
 ?>
 
@@ -17,7 +20,7 @@ $paises = $conexion->allPaises();
         
         <section id="__seccion-busqueda">
             <div class="container">
-                <form action="un-pais.php" method="get">
+                <form action="" method="get">
                     <div class="__input-group">
                         <input type="text" name="pais" placeholder="Buscar un país...">
                         <input type="submit">
