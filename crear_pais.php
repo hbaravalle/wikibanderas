@@ -11,8 +11,10 @@ try {
 $continentes = $conexion->allContinentes();
 
 if($_POST) {
-    $pais = new Pais($_POST['nombre'], $_POST['poblacion'], $_POST['continente'], $_FILES['bandera']['name']);
-    // DB::guardarPais($pais);
+    $imagenBandera = ($_FILES) ? $conexion->guardarImagenBandera($_FILES, $_POST['nombre']) : "";
+    $pais = new Pais($_POST['nombre'], $_POST['poblacion'], $_POST['continente'], $imagenBandera);
+    Helper::pre($pais);
+    $conexion->guardarPais($pais);
 };
 
 

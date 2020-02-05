@@ -7,10 +7,10 @@ class Pais
     protected $continente;
     protected $bandera;
 
-    public function __construct($nombre, $poblacion, $continente, $bandera) {
+    public function __construct($nombre, $poblacion, $continente, $bandera = "default.png") {
         $this->nombre = $nombre;
         $this->poblacion = $poblacion;
-        $this->contiente = $continente;
+        $this->continente = $continente;
         $this->bandera = $bandera;
     }
 
