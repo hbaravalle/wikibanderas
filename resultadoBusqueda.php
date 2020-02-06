@@ -1,10 +1,13 @@
 <?php
 
 require_once('autoload.php');
-$conexion = new BaseDeDatos();
+
 if(isset($_GET['pais']) && $_GET['pais'] != "") {
-    $elPais = $conexion->buscarPais($_GET['pais']);
-    Helper::pre($elPais);
+    $busquedaPaises = $conexion->buscarPais($_GET['pais']);
+    //Helper::pre($busquedaPaises);
+} else {
+    header('Location: index.php');
+    exit;
 }
 
 ?>
@@ -22,18 +25,21 @@ if(isset($_GET['pais']) && $_GET['pais'] != "") {
             <div class="container">
                 <form action="" method="get">
                     <div class="__input-group">
-                        <input type="text" name="pais" placeholder="Buscar un país...">
+                        <input type="text" name="pais" placeholder="Buscar un país..." value="<?= $validador->persistirDato('get', 'pais') ?>">
                         <input type="submit">
                     </div>
                 </form>
+                <div class="titulos">
+                    <h3>Resultados de la búsqueda</h3>
+                    <h5><?= '&quot;' . $_GET['pais'] . '&quot; (' . count($busquedaPaises) . ((count($busquedaPaises) >= 2) ? ' resultados)' : ' resultado)') ?></h5>
+                </div>
             </div>
         </section>
         
         <section id="__seccion-listado-banderas">
             <div class="container">
                 <div class="row">
-
-                <?php foreach($paises as $pais): ?>
+                <?php foreach($busquedaPaises as $pais): ?>
                     <div class="col-6 col-lg-4 col-xl-3 mb-5">
                         <div class="card __card-bandera">
                             <img src="banderas/<?= $pais['bandera'] ?>" alt="Bandera de <?= $pais['nombre'] ?>">
@@ -51,14 +57,11 @@ if(isset($_GET['pais']) && $_GET['pais'] != "") {
                 </div>
             </div>
         </section>
-        <small class="text-center">Hecho con <i class="icon ion-md-heart text-danger"></i> para los alumnos de DH</small>
     </main>
+
+    <?php require_once 'layout/footer.php' ?>
+    <?php require_once 'layout/scripts.php' ?>
     
-    
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>

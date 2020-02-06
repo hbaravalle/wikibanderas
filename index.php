@@ -17,7 +17,7 @@ $paises = $conexion->allPaises();
         
         <section id="__seccion-busqueda">
             <div class="container">
-                <form action="un-pais.php" method="get">
+                <form action="resultadoBusqueda.php" method="get">
                     <div class="__input-group">
                         <input type="text" name="pais" placeholder="Buscar un país...">
                         <input type="submit">
@@ -48,14 +48,11 @@ $paises = $conexion->allPaises();
                 </div>
             </div>
         </section>
-        <small class="text-center">Hecho con <i class="icon ion-md-heart text-danger"></i> para los alumnos de DH</small>
     </main>
     
+    <?php require_once 'layout/footer.php' ?>
+    <?php require_once 'layout/scripts.php' ?>
     
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>

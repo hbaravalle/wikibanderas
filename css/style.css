@@ -4,11 +4,11 @@ ESTILOS GENERALES
 
 body {
     min-height: 100vh;
+    background-color: #eaeaea;
     font-family: 'Poppins', sans-serif;
 }
 
 main {
-    background-color: #eaeaea;
     color: rgb(80, 80, 80);
     min-height: calc(100vh - 55.6px);
 }
@@ -51,7 +51,7 @@ SECCION "BÚSQUEDA"
 
 #__seccion-busqueda input {
     height: 50px;
-    width: 40%;
+    width: 50%;
     border: none;
     border-radius: 3px;
     padding-left: 50px;
@@ -75,6 +75,21 @@ SECCION "BÚSQUEDA"
 
 #__seccion-busqueda input[type="submit"] {
     display: none;
+}
+
+#__seccion-busqueda .titulos {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#__seccion-busqueda .titulos h5 {
+    padding-left: 10px;
+}
+
+#__seccion-busqueda .titulos h5::before {
+    content: '>';
+    padding-right: 10px;
 }
 
 /*==================

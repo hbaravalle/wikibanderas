@@ -52,9 +52,9 @@ if($_POST) {
                             <select class="form-control" name="continente" id="__input-continente">
                                 <option value="">Elegir un continente...</option>
                                 <?php foreach($continentes as $continente): ?>
-                                    <option value="<?= $continente['id']?>"><?= $continente['nombre'] ?></option>
+                                <option value="<?= $continente['id']?>"><?= $continente['nombre'] ?></option>
                                 <?php endforeach; ?>
-
+                                
                             </select>
                         </div>
                         
@@ -68,10 +68,11 @@ if($_POST) {
                     </form>
                 </div>
             </div>
-            <small class="text-center">Hecho con <i class="icon ion-md-heart text-danger"></i> para los alumnos de DH</small>
-        </main>
-        
-    </div>
+        </div>
+    </main>
+
+    <?php require_once 'layout/footer.php' ?>
+    <?php require_once 'layout/scripts.php' ?>
     
 </body>
 </html>
